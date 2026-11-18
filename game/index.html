@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VICE BAY — an open-world crime game</title>
+<meta name="description" content="VICE BAY: a sun-soaked open-world crime game. Steal cars, dodge the Vice Bay PD, run five story missions and climb from nobody to Vice King.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+
+<div id="title-screen" class="overlay">
+  <div class="panel">
+    <h1 class="logo">VICE BAY</h1>
+    <p class="tagline">Sun. Sand. Sirens.</p>
+    <p class="blurb">You are Ray Vega, fresh off the bus in Vice Bay with $120 and a borrowed
+    name. Mara, the fixer who runs the garage on Palm Row, has work for anyone fast
+    enough to take it. Steal cars, run couriers, dodge the Vice Bay PD, and climb
+    from nobody to <strong>Vice King</strong> — one mission at a time.</p>
+    <div class="controls">
+      <div><span class="key">W A S D</span> move / drive</div>
+      <div><span class="key">E</span> enter / exit car</div>
+      <div><span class="key">Space</span> handbrake</div>
+      <div><span class="key">Shift</span> sprint</div>
+      <div><span class="key">F</span> punch &nbsp;·&nbsp; <span class="key">Click</span> shoot</div>
+      <div><span class="key">M</span> start mission &nbsp;·&nbsp; <span class="key">Esc</span> pause &nbsp;·&nbsp; <span class="key">N</span> mute</div>
+    </div>
+    <div class="buttons">
+      <button id="start-btn" class="btn primary">▶ Start the story</button>
+      <button id="continue-btn" class="btn">Continue saved game</button>
+    </div>
+    <p class="fine">5 story missions · taxi fares · wanted level 0–5 · police chases · free roam after the story. Progress saves automatically.</p>
+  </div>
+</div>
+
+<div id="pause-screen" class="overlay hidden">
+  <div class="panel">
+    <h1>PAUSED</h1>
+    <p class="blurb">Vice Bay waits for no one. Well — except now.</p>
+    <div class="buttons">
+      <button id="resume-btn" class="btn primary">Resume</button>
+      <button id="restart-btn" class="btn">Restart from scratch</button>
+    </div>
+  </div>
+</div>
+
+<div id="busted-screen" class="overlay hidden">
+  <div class="panel">
+    <h1 class="busted">BUSTED</h1>
+    <p id="busted-detail" class="blurb"></p>
+    <div class="buttons">
+      <button id="busted-btn" class="btn primary">Leave the hospital</button>
+    </div>
+  </div>
+</div>
+
+<div id="wasted-screen" class="overlay hidden">
+  <div class="panel">
+    <h1 class="busted">WASTED</h1>
+    <p id="wasted-detail" class="blurb"></p>
+    <div class="buttons">
+      <button id="wasted-btn" class="btn primary">Leave the hospital</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
